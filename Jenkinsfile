@@ -13,12 +13,6 @@ pipeline {
   }
 
   stages {
-       stage('Stage 0: Git Connection Check') {
-    steps {
-      echo 'Checking Git connection and showing latest commit info...'
-      sh 'git log -1 --pretty=format:"%h - %an: %s"'
-    }
-  }
     stage('Stage 1: Build') {
       steps {
         echo 'Building the project with a build tool (e.g., Maven/Gradle/npm).'
